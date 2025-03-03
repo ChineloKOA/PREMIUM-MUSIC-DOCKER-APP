@@ -6,7 +6,7 @@ from starlette.status import HTTP_400_BAD_REQUEST
 from databases import Database
 
 from app.db.repositories.base import BaseRepository
-from app.models.smart_user import UserCreate, UserUpdate, UserInDB, UserPublic
+from app.models.user import UserCreate, UserUpdate, UserInDB, UserPublic
 from app.services import auth_service
 
 GET_USER_BY_EMAIL_QUERY = """

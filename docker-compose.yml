@@ -1,5 +1,6 @@
 services:
   server:
+    image: premium-music-docker-app-server:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
