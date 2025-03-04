@@ -10,6 +10,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build and Push the Image
         run: |
-          docker login --username ${{ vars.DOCKER_USERNAME }} --password ${{secrets.premium_music_app }} ghcr.io
-          docker build . --tag ghcr.io/${{ vars.DOCKER_USERNAME }}/premium-music-docker-app-server:latest
-          docker push ghcr.io/${{ vars.DOCKER_USERNAME }}/premium-music-docker-app-server:latest
+          docker login --username ${{ vars.USERNAME }} --password ${{secrets.premium_music_app }} ghcr.io
+          docker build . --tag ghcr.io/${{ vars.USERNAME }}/premium-music-docker-app-server:latest
+          docker push ghcr.io/${{ vars.USERNAME }}/premium-music-docker-app-server:latest
