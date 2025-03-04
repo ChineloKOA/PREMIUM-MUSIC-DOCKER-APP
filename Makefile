@@ -15,5 +15,5 @@ build_run: build run
 # Pull the latest changes, commit, and push to the repository
 push:
 	git pull
-	git commit -m $${message}
+	git commit -m ${message}
 	git push
