@@ -1,0 +1,15 @@
+name: Docker CI for Premium music App
+on:
+  push:
+    branches: [ dev ]
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and Push the Image
+        run: |
+          docker login --username ${{ vars.DOCKER_USERNAME }} --password ${{secrets.premium_music_app }} ghcr.io
+          docker build . --tag ghcr.io/${{ vars.DOCKER_USERNAME }}/premium-music-docker-app-server:latest
+          docker push ghcr.io/${{ vars.DOCKER_USERNAME }}/premium-music-docker-app-server:latest
