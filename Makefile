@@ -1,5 +1,5 @@
 # Define the message variable for commit messages
-MESSAGE ?= "Default commit message"
+message = "code changes message"
 
 # Build the Docker containers without starting them
 build:
@@ -15,5 +15,5 @@ build_run: build run
 # Pull the latest changes, commit, and push to the repository
 push:
 	git pull
-	git commit -am $${MESSAGE}
+	git commit -am ${message}
 	git push
